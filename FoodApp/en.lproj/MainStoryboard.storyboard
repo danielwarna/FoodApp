@@ -8,20 +8,39 @@
         <scene sceneID="3Pn-j2-SiH">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5g-Ml-NEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="w5o-4t-WCx" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kH8-3d-K85">
+                <tableViewController id="w5o-4t-WCx" customClass="FoodlistViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="171" sectionHeaderHeight="22" sectionFooterHeight="22" id="kH8-3d-K85">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="EQc-JI-2Vw">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="171" id="EQc-JI-2Vw">
+                                <rect key="frame" x="0.0" y="22" width="320" height="171"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="170"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Restaurang" lineBreakMode="tailTruncation" minimumFontSize="10" id="i85-Rv-jgD">
+                                            <rect key="frame" x="20" y="20" width="88" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Maträtt1 Maträtt2 Maträtt3 Maträtt4" lineBreakMode="wordWrap" numberOfLines="4" adjustsFontSizeToFit="NO" minimumFontSize="10" id="A9W-Yb-gQF">
+                                            <rect key="frame" x="39" y="34" width="109" height="101"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="fFB-zE-8Nk" kind="push" id="n5Q-KB-JzG"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -39,31 +58,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9zp-U8-vsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="fFB-zE-8Nk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="adK-1h-jAt">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Bd2-Ny-RZ2"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1244" y="200"/>
+            <point key="canvasLocation" x="1244" y="180"/>
         </scene>
         <scene sceneID="fRC-ja-vE0">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKS-8Z-I3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="qab-8N-OXy" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2ME-Z1-OQJ">
+                <tableViewController id="qab-8N-OXy" customClass="RestaurantlistViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="152" sectionHeaderHeight="22" sectionFooterHeight="22" id="2ME-Z1-OQJ">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yIh-TS-Y3B">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="152" id="yIh-TS-Y3B">
+                                <rect key="frame" x="0.0" y="22" width="320" height="152"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="151"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Restaurang" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="DGZ-lm-P0D">
+                                            <rect key="frame" x="20" y="8" width="116" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Vad vi nu sku ha att stå hit" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="zJX-OU-k6d">
+                                            <rect key="frame" x="15" y="31" width="193" height="113"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="I9W-oz-dsv">
+                                            <rect key="frame" x="216" y="8" width="84" height="84"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="fFB-zE-8Nk" kind="push" id="qy3-zQ-6d2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -71,7 +114,7 @@
                             <outlet property="delegate" destination="qab-8N-OXy" id="4sj-IQ-DV0"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Restauratn list" id="iSJ-CB-ScA"/>
+                    <tabBarItem key="tabBarItem" title="Restaurant list" id="iSJ-CB-ScA"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="677" y="-561"/>
@@ -79,13 +122,22 @@
         <scene sceneID="zaF-Cx-Aaw">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAV-ZD-sIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="d9a-xZ-X6d" sceneMemberID="viewController">
+                <viewController id="d9a-xZ-X6d" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lfH-GF-HMG">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="J0o-lP-NTZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mapview" id="Hxj-ay-01b"/>
+                    <connections>
+                        <outlet property="mapView" destination="J0o-lP-NTZ" id="Zzb-ZU-tmF"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="677" y="912"/>
@@ -110,9 +162,26 @@
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="FoodlistViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodlistViewController.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="RestaurantlistViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantlistViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="qy3-zQ-6d2"/>
+    </inferredMetricsTieBreakers>
 </document>
