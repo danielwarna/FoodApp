@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		508619E714EF96FE00917802 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508619E614EF96FE00917802 /* UIKit.framework */; };
+		508619E914EF96FE00917802 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508619E814EF96FE00917802 /* Foundation.framework */; };
+		508619EB14EF96FE00917802 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508619EA14EF96FE00917802 /* CoreGraphics.framework */; };
+		508619F114EF96FE00917802 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 508619EF14EF96FE00917802 /* InfoPlist.strings */; };
+		508619F314EF96FE00917802 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 508619F214EF96FE00917802 /* main.m */; };
+		508619F714EF96FE00917802 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 508619F614EF96FE00917802 /* AppDelegate.m */; };
+		508619FA14EF96FF00917802 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508619F814EF96FF00917802 /* MainStoryboard.storyboard */; };
+		508619FD14EF96FF00917802 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508619FC14EF96FF00917802 /* FirstViewController.m */; };
+		508619FF14EF96FF00917802 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 508619FE14EF96FF00917802 /* first.png */; };
+		50861A0114EF96FF00917802 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50861A0014EF96FF00917802 /* first@2x.png */; };
+		50861A0414EF96FF00917802 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50861A0314EF96FF00917802 /* SecondViewController.m */; };
+		50861A0614EF96FF00917802 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 50861A0514EF96FF00917802 /* second.png */; };
+		50861A0814EF96FF00917802 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50861A0714EF96FF00917802 /* second@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		508619E214EF96FE00917802 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		508619E614EF96FE00917802 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		508619E814EF96FE00917802 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		508619EA14EF96FE00917802 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		508619EE14EF96FE00917802 /* FoodApp-Info.plist */ = {isa = PBXFileReference; path = "FoodApp-Info.plist"; sourceTree = "<group>"; };
+		508619F014EF96FE00917802 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		508619F214EF96FE00917802 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		508619F414EF96FE00917802 /* FoodApp-Prefix.pch */ = {isa = PBXFileReference; path = "FoodApp-Prefix.pch"; sourceTree = "<group>"; };
+		508619F514EF96FE00917802 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		508619F614EF96FE00917802 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		508619F914EF96FF00917802 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		508619FB14EF96FF00917802 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		508619FC14EF96FF00917802 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		508619FE14EF96FF00917802 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		50861A0014EF96FF00917802 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		50861A0214EF96FF00917802 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		50861A0314EF96FF00917802 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		50861A0514EF96FF00917802 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		50861A0714EF96FF00917802 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		508619DF14EF96FD00917802 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				508619E714EF96FE00917802 /* UIKit.framework in Frameworks */,
+				508619E914EF96FE00917802 /* Foundation.framework in Frameworks */,
+				508619EB14EF96FE00917802 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		508619D714EF96FC00917802 = {
+			isa = PBXGroup;
+			children = (
+				508619EC14EF96FE00917802 /* FoodApp */,
+				508619E514EF96FE00917802 /* Frameworks */,
+				508619E314EF96FE00917802 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		508619E314EF96FE00917802 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				508619E214EF96FE00917802 /* FoodApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		508619E514EF96FE00917802 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				508619E614EF96FE00917802 /* UIKit.framework */,
+				508619E814EF96FE00917802 /* Foundation.framework */,
+				508619EA14EF96FE00917802 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		508619EC14EF96FE00917802 /* FoodApp */ = {
+			isa = PBXGroup;
+			children = (
+				508619F514EF96FE00917802 /* AppDelegate.h */,
+				508619F614EF96FE00917802 /* AppDelegate.m */,
+				508619F814EF96FF00917802 /* MainStoryboard.storyboard */,
+				508619FB14EF96FF00917802 /* FirstViewController.h */,
+				508619FC14EF96FF00917802 /* FirstViewController.m */,
+				508619FE14EF96FF00917802 /* first.png */,
+				50861A0014EF96FF00917802 /* first@2x.png */,
+				50861A0214EF96FF00917802 /* SecondViewController.h */,
+				50861A0314EF96FF00917802 /* SecondViewController.m */,
+				50861A0514EF96FF00917802 /* second.png */,
+				50861A0714EF96FF00917802 /* second@2x.png */,
+				508619ED14EF96FE00917802 /* Supporting Files */,
+			);
+			path = FoodApp;
+			sourceTree = "<group>";
+		};
+		508619ED14EF96FE00917802 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				508619EE14EF96FE00917802 /* FoodApp-Info.plist */,
+				508619EF14EF96FE00917802 /* InfoPlist.strings */,
+				508619F214EF96FE00917802 /* main.m */,
+				508619F414EF96FE00917802 /* FoodApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		508619E114EF96FD00917802 /* FoodApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50861A0B14EF96FF00917802 /* Build configuration list for PBXNativeTarget "FoodApp" */;
+			buildPhases = (
+				508619DE14EF96FD00917802 /* Sources */,
+				508619DF14EF96FD00917802 /* Frameworks */,
+				508619E014EF96FD00917802 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoodApp;
+			productName = FoodApp;
+			productReference = 508619E214EF96FE00917802 /* FoodApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		508619D914EF96FC00917802 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 508619DC14EF96FC00917802 /* Build configuration list for PBXProject "FoodApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 508619D714EF96FC00917802;
+			productRefGroup = 508619E314EF96FE00917802 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				508619E114EF96FD00917802 /* FoodApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		508619E014EF96FD00917802 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				508619F114EF96FE00917802 /* InfoPlist.strings in Resources */,
+				508619FA14EF96FF00917802 /* MainStoryboard.storyboard in Resources */,
+				508619FF14EF96FF00917802 /* first.png in Resources */,
+				50861A0114EF96FF00917802 /* first@2x.png in Resources */,
+				50861A0614EF96FF00917802 /* second.png in Resources */,
+				50861A0814EF96FF00917802 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		508619DE14EF96FD00917802 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				508619F314EF96FE00917802 /* main.m in Sources */,
+				508619F714EF96FE00917802 /* AppDelegate.m in Sources */,
+				508619FD14EF96FF00917802 /* FirstViewController.m in Sources */,
+				50861A0414EF96FF00917802 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		508619EF14EF96FE00917802 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				508619F014EF96FE00917802 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		508619F814EF96FF00917802 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				508619F914EF96FF00917802 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50861A0914EF96FF00917802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50861A0A14EF96FF00917802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50861A0C14EF96FF00917802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FoodApp/FoodApp-Prefix.pch";
+				INFOPLIST_FILE = "FoodApp/FoodApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		50861A0D14EF96FF00917802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FoodApp/FoodApp-Prefix.pch";
+				INFOPLIST_FILE = "FoodApp/FoodApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		508619DC14EF96FC00917802 /* Build configuration list for PBXProject "FoodApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50861A0914EF96FF00917802 /* Debug */,
+				50861A0A14EF96FF00917802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50861A0B14EF96FF00917802 /* Build configuration list for PBXNativeTarget "FoodApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50861A0C14EF96FF00917802 /* Debug */,
+				50861A0D14EF96FF00917802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 508619D914EF96FC00917802 /* Project object */;
+}
