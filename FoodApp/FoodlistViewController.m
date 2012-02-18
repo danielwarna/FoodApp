@@ -10,6 +10,8 @@
 
 
 @implementation FoodlistViewController
+@synthesize Restaurant;
+@synthesize Matratter;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"loaded the foodlistviewcontroller");
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -43,6 +46,8 @@
 
 - (void)viewDidUnload
 {
+    [self setRestaurant:nil];
+    [self setMatratter:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -18,7 +18,7 @@
 		50861A0114EF96FF00917802 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50861A0014EF96FF00917802 /* first@2x.png */; };
 		50861A0614EF96FF00917802 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 50861A0514EF96FF00917802 /* second.png */; };
 		50861A0814EF96FF00917802 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50861A0714EF96FF00917802 /* second@2x.png */; };
-		68A6012B14FB7F8400FCA35D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6012A14FB7F8400FCA35D /* MapViewController.m */; };
+		50F814C514EFD17C00A0838B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F814C414EFD17C00A0838B /* MapViewController.m */; };
 		68A6012E14FB84FA00FCA35D /* FoodlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6012D14FB84FA00FCA35D /* FoodlistViewController.m */; };
 		68A6013114FB850F00FCA35D /* RestaurantlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6013014FB850F00FCA35D /* RestaurantlistViewController.m */; };
 		68A6013414FB888300FCA35D /* FoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6013314FB888300FCA35D /* FoodModel.m */; };
@@ -41,8 +41,8 @@
 		50861A0014EF96FF00917802 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		50861A0514EF96FF00917802 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		50861A0714EF96FF00917802 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		68A6012914FB7F8400FCA35D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		68A6012A14FB7F8400FCA35D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		50F814C314EFD17C00A0838B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		50F814C414EFD17C00A0838B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		68A6012C14FB84FA00FCA35D /* FoodlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodlistViewController.h; sourceTree = "<group>"; };
 		68A6012D14FB84FA00FCA35D /* FoodlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodlistViewController.m; sourceTree = "<group>"; };
 		68A6012F14FB850F00FCA35D /* RestaurantlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantlistViewController.h; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 				68A6012D14FB84FA00FCA35D /* FoodlistViewController.m */,
 				68A6012F14FB850F00FCA35D /* RestaurantlistViewController.h */,
 				68A6013014FB850F00FCA35D /* RestaurantlistViewController.m */,
-				68A6012914FB7F8400FCA35D /* MapViewController.h */,
-				68A6012A14FB7F8400FCA35D /* MapViewController.m */,
+				50F814C314EFD17C00A0838B /* MapViewController.h */,
+				50F814C414EFD17C00A0838B /* MapViewController.m */,
 				508619FE14EF96FF00917802 /* first.png */,
 				50861A0014EF96FF00917802 /* first@2x.png */,
 				50861A0514EF96FF00917802 /* second.png */,
@@ -197,10 +197,10 @@
 			files = (
 				508619F314EF96FE00917802 /* main.m in Sources */,
 				508619F714EF96FE00917802 /* AppDelegate.m in Sources */,
-				68A6012B14FB7F8400FCA35D /* MapViewController.m in Sources */,
 				68A6012E14FB84FA00FCA35D /* FoodlistViewController.m in Sources */,
 				68A6013114FB850F00FCA35D /* RestaurantlistViewController.m in Sources */,
 				68A6013414FB888300FCA35D /* FoodModel.m in Sources */,
+				50F814C514EFD17C00A0838B /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

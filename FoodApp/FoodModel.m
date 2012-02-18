@@ -10,8 +10,24 @@
 
 @implementation FoodModel
 
--(void)loadData {
+@synthesize restaurantName;
+@synthesize menu;
+@synthesize isVisible;
+
+
++(NSArray*)fetchMenuList {
+    NSURL *theUrl = [NSURL URLWithString:@"http://danno.infa.fi/stuff/foodapptest.json"];
+   
+    NSURLRequest *urlrequest = [NSURLRequest requestWithURL:theUrl
+                                cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                timeoutInterval:30];
+    NSData *urlData;
+    NSURLResponse *response;
+    NSError *error;
     
+    urlData = [NSURLConnection sendSynchronousRequest:urlrequest 
+                                    returningResponse:&response
+                                                error:&error];
 }
 
 

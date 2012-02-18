@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface FoodModel : NSObject
 
+@property(nonatomic, retain) NSString *restaurantName;
+@property(nonatomic, retain) NSArray *menu;
+@property(nonatomic) bool *isVisible;
+@property(nonatomic, retain) NSData *updated;
+
+
+-(NSString*) getMenuForDay:(NSInteger*) day;
++(NSArray*) fetchMenuList;
+
 @end
+

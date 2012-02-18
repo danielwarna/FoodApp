@@ -49,9 +49,33 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Foodlist" id="bwA-CX-ces"/>
+                    <connections>
+                        <outlet property="Maträtter" destination="A9W-Yb-gQF" id="b5j-gp-W7M"/>
+                        <outlet property="Restaurant" destination="i85-Rv-jgD" id="bOQ-FS-Fyy"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="677" y="180"/>
+        </scene>
+        <scene sceneID="1ce-md-53R">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3nq-SN-M0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="FDF-tJ-Syf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XDS-qf-MoF" customClass="MapViewController">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="1Ns-dg-m0Y">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="gju-1j-1eY"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="677" y="828"/>
         </scene>
         <scene sceneID="cuS-cX-Uep">
             <objects>
@@ -115,32 +139,14 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Restaurant list" id="iSJ-CB-ScA"/>
+                    <connections>
+                        <outlet property="Restaurant" destination="DGZ-lm-P0D" id="FZz-gF-KRM"/>
+                        <outlet property="restaurantInfo" destination="zJX-OU-k6d" id="XH9-AU-FhH"/>
+                        <outlet property="restaurantLogo" destination="I9W-oz-dsv" id="R9w-tI-yRQ"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="677" y="-561"/>
-        </scene>
-        <scene sceneID="zaF-Cx-Aaw">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uAV-ZD-sIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="d9a-xZ-X6d" customClass="MapViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lfH-GF-HMG">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="J0o-lP-NTZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Mapview" id="Hxj-ay-01b"/>
-                    <connections>
-                        <outlet property="mapView" destination="J0o-lP-NTZ" id="Zzb-ZU-tmF"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="677" y="912"/>
         </scene>
         <scene sceneID="15">
             <objects>
@@ -155,25 +161,31 @@
                     <connections>
                         <segue destination="qab-8N-OXy" kind="relationship" relationship="viewControllers" id="wVz-h5-KZd"/>
                         <segue destination="w5o-4t-WCx" kind="relationship" relationship="viewControllers" id="U6s-1H-Ag2"/>
-                        <segue destination="d9a-xZ-X6d" kind="relationship" relationship="viewControllers" id="2oO-mD-i1L"/>
+                        <segue destination="FDF-tJ-Syf" kind="relationship" relationship="viewControllers" id="s9s-fC-0Gj"/>
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="132" y="180"/>
+            <point key="canvasLocation" x="49" y="180"/>
         </scene>
     </scenes>
     <classes>
         <class className="FoodlistViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodlistViewController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="Matratter" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Restaurant" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
         </class>
         <class className="RestaurantlistViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantlistViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="Restaurant" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="restaurantInfo" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="restaurantLogo" candidateClass="UIImageView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -182,6 +194,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qy3-zQ-6d2"/>
+        <segue reference="n5Q-KB-JzG"/>
     </inferredMetricsTieBreakers>
 </document>
