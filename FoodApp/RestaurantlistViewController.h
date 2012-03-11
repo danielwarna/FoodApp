@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface RestaurantlistViewController : UITableViewController
+
+@property (retain, nonatomic) NSArray *RestaurantList;
+
 @property (weak, nonatomic) IBOutlet UILabel *Restaurant;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantInfo;
 @property (weak, nonatomic) IBOutlet UIImageView *restaurantLogo;

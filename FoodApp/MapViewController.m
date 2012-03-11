@@ -10,14 +10,20 @@
 
 @implementation MapViewController 
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Initialization code
+        // Custom initializationß
     }
     return self;
 }
+
+-(void) viewWillAppear:(BOOL)animated{
+    NSLog(@"Mapview will appear");
+    //view appears
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
