@@ -24,6 +24,7 @@
 		68A6013114FB850F00FCA35D /* RestaurantlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6013014FB850F00FCA35D /* RestaurantlistViewController.m */; };
 		68A6013414FB888300FCA35D /* FoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6013314FB888300FCA35D /* FoodModel.m */; };
 		68A6013614FB899300FCA35D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A6013514FB899300FCA35D /* MapKit.framework */; };
+		7304E535150EA63A00F076F9 /* FoodFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7304E534150EA63A00F076F9 /* FoodFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		68A6013214FB888300FCA35D /* FoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodModel.h; sourceTree = "<group>"; };
 		68A6013314FB888300FCA35D /* FoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodModel.m; sourceTree = "<group>"; };
 		68A6013514FB899300FCA35D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7304E533150EA63A00F076F9 /* FoodFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodFetcher.h; sourceTree = "<group>"; };
+		7304E534150EA63A00F076F9 /* FoodFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +76,6 @@
 		508619D714EF96FC00917802 = {
 			isa = PBXGroup;
 			children = (
-				68A6013514FB899300FCA35D /* MapKit.framework */,
 				508619EC14EF96FE00917802 /* FoodApp */,
 				508619E514EF96FE00917802 /* Frameworks */,
 				508619E314EF96FE00917802 /* Products */,
@@ -91,6 +93,7 @@
 		508619E514EF96FE00917802 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68A6013514FB899300FCA35D /* MapKit.framework */,
 				508619E614EF96FE00917802 /* UIKit.framework */,
 				508619E814EF96FE00917802 /* Foundation.framework */,
 				508619EA14EF96FE00917802 /* CoreGraphics.framework */,
@@ -108,6 +111,8 @@
 				508619F814EF96FF00917802 /* MainStoryboard.storyboard */,
 				68A6013214FB888300FCA35D /* FoodModel.h */,
 				68A6013314FB888300FCA35D /* FoodModel.m */,
+				7304E533150EA63A00F076F9 /* FoodFetcher.h */,
+				7304E534150EA63A00F076F9 /* FoodFetcher.m */,
 				68A6012C14FB84FA00FCA35D /* FoodlistViewController.h */,
 				68A6012D14FB84FA00FCA35D /* FoodlistViewController.m */,
 				68A6012F14FB850F00FCA35D /* RestaurantlistViewController.h */,
@@ -207,6 +212,7 @@
 				68A6013414FB888300FCA35D /* FoodModel.m in Sources */,
 				50F814C514EFD17C00A0838B /* MapViewController.m in Sources */,
 				50AED602150E63BF00FF1767 /* DetailViewController.m in Sources */,
+				7304E535150EA63A00F076F9 /* FoodFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
