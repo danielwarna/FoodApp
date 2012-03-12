@@ -23,11 +23,11 @@
 - (void)fetchFoodList {
     dispatch_async(bgQueue, ^{
         NSData* data = [NSData dataWithContentsOfURL:foodListURL];
-        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
+        [self performSelectorOnMainThread:@selector(fetchData:) withObject:data waitUntilDone:YES];
     });
 }
 
-- (void)fetrchedData:(NSData *)responseData {
+- (void)fetchData:(NSData *)responseData {
     NSError* error;
     NSArray* jsonArray = [NSJSONSerialization
                           JSONObjectWithData:responseData

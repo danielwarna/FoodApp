@@ -10,7 +10,7 @@
 
 @interface FoodlistViewController : UITableViewController
 
-@property (retain, nonatomic) NSArray *RestaurantList;
+@property (retain, nonatomic) NSArray *restaurantList;
 
 
 @end

@@ -14,7 +14,7 @@
 @synthesize Restaurant;
 @synthesize restaurantInfo;
 @synthesize restaurantLogo;
-@synthesize RestaurantList;
+@synthesize restaurantList;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

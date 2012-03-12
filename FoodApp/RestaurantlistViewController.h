@@ -10,7 +10,7 @@
 
 @interface RestaurantlistViewController : UITableViewController
 
-@property (retain, nonatomic) NSArray *RestaurantList;
+@property (retain, nonatomic) NSArray *restaurantList;
 
 @property (weak, nonatomic) IBOutlet UILabel *Restaurant;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantInfo;
