@@ -13,6 +13,13 @@
 
 @implementation FoodFetcher
 
+@synthesize foodData;
+
+- (id)init {
+    [self fetchFoodList];
+    return self;
+}
+
 - (void)fetchFoodList {
     dispatch_async(bgQueue, ^{
         NSData* data = [NSData dataWithContentsOfURL:foodListURL];
@@ -22,10 +29,12 @@
 
 - (void)fetrchedData:(NSData *)responseData {
     NSError* error;
-    NSDictionary* json = [NSJSONSerialization
+    NSArray* jsonArray = [NSJSONSerialization
                           JSONObjectWithData:responseData
                           options:0
                           error:&error];
+    
+    self.foodData = jsonArray;
 }
 
 @end

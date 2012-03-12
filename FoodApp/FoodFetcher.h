@@ -10,4 +10,6 @@
 
 @interface FoodFetcher : NSObject
 
+@property (retain, nonatomic) NSArray *foodData;
+
 @end
