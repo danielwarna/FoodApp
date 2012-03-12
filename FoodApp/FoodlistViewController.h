@@ -11,8 +11,7 @@
 @interface FoodlistViewController : UITableViewController
 
 @property (retain, nonatomic) NSArray *RestaurantList;
-@property (weak, nonatomic) IBOutlet UILabel *Restaurant;
-@property (weak, nonatomic) IBOutlet UILabel *Matratter;
+
 
 @end
 	

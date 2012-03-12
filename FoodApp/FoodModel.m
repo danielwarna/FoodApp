@@ -15,6 +15,7 @@
 @synthesize isVisible;
 @synthesize updated;
 @synthesize location;
+@synthesize openingHours;
 
 +(NSArray*)fetchMenuList {
     NSURL *theUrl = [NSURL URLWithString:@"http://danno.infa.fi/stuff/foodapptest.json"];
@@ -29,9 +30,16 @@
     urlData = [NSURLConnection sendSynchronousRequest:urlrequest 
                                     returningResponse:&response
                                                 error:&error];
+    
 }
 -(NSString *)getMenuForDay:(NSInteger *)day {
     return (@"This is a menu");
+}
+-(void) encodeWithCoder:(NSCoder *)encoder {
+    
+}
+-(id) initWithCoder:(NSCoder *)decoder {
+    
 }
 
 

@@ -10,8 +10,7 @@
 
 
 @implementation FoodlistViewController
-@synthesize Restaurant;
-@synthesize Matratter;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -46,8 +45,7 @@
 
 - (void)viewDidUnload
 {
-    [self setRestaurant:nil];
-    [self setMatratter:nil];
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -92,7 +90,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,15 +101,34 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = @"dfFDGFDGDFGDFgdfgd";
-    Restaurant.text = @"testing";
-    Matratter.text = @"dsfs";
+    UILabel *header = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 320, 28)];
+    header.text = @"Gadolinia"; 
+    header.backgroundColor = [UIColor blueColor];
+    //cell.textLabel.text = @"Gadolinia";
+    //Generating menuitems
+    [cell addSubview:header];
+    for (int i=0; i<4; i++) {
+        UILabel *label;
+        if (i==0) {
+            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40, 200, 20))];
+        }else{
+            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(i*20), 200, 20))];
+        }
+        [label setText:@"Testing"];
+        [cell addSubview:label];
+        
+    }
     
     
     // Configure the cell...
     
     return cell;
 }
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //This is where we calculate the cell rowheight
+    return 200;
+}
+                                                                            
 
 /*
 // Override to support conditional editing of the table view.
