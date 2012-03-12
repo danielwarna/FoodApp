@@ -18,6 +18,7 @@
 		50861A0114EF96FF00917802 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50861A0014EF96FF00917802 /* first@2x.png */; };
 		50861A0614EF96FF00917802 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 50861A0514EF96FF00917802 /* second.png */; };
 		50861A0814EF96FF00917802 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50861A0714EF96FF00917802 /* second@2x.png */; };
+		50AED602150E63BF00FF1767 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AED601150E63BF00FF1767 /* DetailViewController.m */; };
 		50F814C514EFD17C00A0838B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F814C414EFD17C00A0838B /* MapViewController.m */; };
 		68A6012E14FB84FA00FCA35D /* FoodlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6012D14FB84FA00FCA35D /* FoodlistViewController.m */; };
 		68A6013114FB850F00FCA35D /* RestaurantlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A6013014FB850F00FCA35D /* RestaurantlistViewController.m */; };
@@ -41,6 +42,8 @@
 		50861A0014EF96FF00917802 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		50861A0514EF96FF00917802 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		50861A0714EF96FF00917802 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		50AED600150E63BF00FF1767 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		50AED601150E63BF00FF1767 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		50F814C314EFD17C00A0838B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		50F814C414EFD17C00A0838B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		68A6012C14FB84FA00FCA35D /* FoodlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodlistViewController.h; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 		508619EC14EF96FE00917802 /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				50AED600150E63BF00FF1767 /* DetailViewController.h */,
+				50AED601150E63BF00FF1767 /* DetailViewController.m */,
 				508619F514EF96FE00917802 /* AppDelegate.h */,
 				508619F614EF96FE00917802 /* AppDelegate.m */,
 				508619F814EF96FF00917802 /* MainStoryboard.storyboard */,
@@ -201,6 +206,7 @@
 				68A6013114FB850F00FCA35D /* RestaurantlistViewController.m in Sources */,
 				68A6013414FB888300FCA35D /* FoodModel.m in Sources */,
 				50F814C514EFD17C00A0838B /* MapViewController.m in Sources */,
+				50AED602150E63BF00FF1767 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

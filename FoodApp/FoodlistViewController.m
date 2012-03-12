@@ -7,7 +7,7 @@
 //
 
 #import "FoodlistViewController.h"
-
+#import "DetailViewController.h"
 
 @implementation FoodlistViewController
 
@@ -71,6 +71,15 @@
     [super viewDidDisappear:animated];
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *detailView = segue.destinationViewController;
+    NSIndexPath *selectedIndexPath;
+    selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    
+    NSLog(@"Preparing for segue");
+    //detailView.resturantInfo = hämta restauranginfo
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
@@ -90,12 +99,12 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 2;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"FoodCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -128,8 +137,7 @@
     //This is where we calculate the cell rowheight
     return 200;
 }
-                                                                            
-
+                                                                        
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FoodModel.h"
 
-@interface DetailViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *RestaurantName;
-@property (weak, nonatomic) IBOutlet UILabel *OpenHours;
+@interface DetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+    UITableView *foodListTable;
+}
 
-@property (weak, nonatomic) IBOutlet UITableView *TableView; //Behöver vi en tableview, eller sku de vara lättare att bara generara nå labels eller nå i den stilen?
+@property (nonatomic, retain) IBOutlet UINavigationBar *TitleBar;
+@property (nonatomic, retain) IBOutlet UILabel *RestaurantName;
+@property (nonatomic, retain) IBOutlet UILabel *OpenHours;
+
+@property (nonatomic, retain) IBOutlet UITableView *foodListTable; //Behöver vi en tableview, eller sku de vara lättare att bara generara nå labels eller nå i den stilen?
+@property (nonatomic, retain) IBOutlet UIButton *NavigateButton;
+
+@property(retain, nonatomic) FoodModel *resturantInfo;
 
 @end

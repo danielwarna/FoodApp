@@ -7,6 +7,7 @@
 //
 
 #import "RestaurantlistViewController.h"
+#import "DetailViewController.h"
 
 
 @implementation RestaurantlistViewController
@@ -82,6 +83,16 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *detailView = segue.destinationViewController;
+    NSIndexPath *selectedIndexPath;
+    selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    
+    //detailView.resturantInfo = hämta restauranginfo
+    NSLog(@"Preparing for segue from restaurant list");
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -100,14 +111,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"RestaurantCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     cell.textLabel.text = @"Gado1";
-    cell.detailTextLabel.text = @"Biff /n Vege";
     
     // Configure the cell...
     
