@@ -8,6 +8,7 @@
 
 #import "RestaurantlistViewController.h"
 #import "DetailViewController.h"
+#import "FoodFetcher.h"
 
 
 @implementation RestaurantlistViewController
@@ -39,6 +40,11 @@
 {
     [super viewDidLoad];
     NSLog(@"Loaded the restaurantlistviewcontroller");
+    
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
+    foodData = fetcher.foodData;
+    
+    NSLog(@"Fetcherdata count: %i", [foodData count]);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

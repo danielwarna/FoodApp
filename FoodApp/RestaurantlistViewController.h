@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RestaurantlistViewController : UITableViewController
+@interface RestaurantlistViewController : UITableViewController {
+    NSArray *foodData;
+}
 
 @property (retain, nonatomic) NSArray *restaurantList;
 

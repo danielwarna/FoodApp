@@ -13,6 +13,7 @@
 
 @property (retain, nonatomic) NSArray *foodData;
 
++ (id)sharedInstance;
 - (void)fetchFoodList;
-- (void)fetchData;
+- (void)fetchData:(NSArray *)responseData;
 @end

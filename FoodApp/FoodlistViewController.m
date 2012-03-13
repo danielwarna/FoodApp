@@ -37,9 +37,12 @@
 {
     [super viewDidLoad];
     NSLog(@"loaded the foodlistviewcontroller");
-    FoodFetcher *fetcher = [[FoodFetcher alloc]init];
+    
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
+    foodData = fetcher.foodData;
 
-    NSLog(@"Fetcherdata count: %@", [fetcher.foodData count]);
+    NSLog(@"Fetcherdata count: %i", [foodData count]);
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
