@@ -36,9 +36,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
+    return [[restaurantData objectForKey:@"lunchmenu"] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -49,7 +48,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = @"Nomnomnom";
+    NSArray *lunchArray = [restaurantData objectForKey:@"lunchmenu"];
+    
+    cell.textLabel.text = [[[[lunchArray objectAtIndex:0]objectForKey:@"items"]objectAtIndex:0]objectForKey:@"name"];
     
     // Configure the cell...
     
