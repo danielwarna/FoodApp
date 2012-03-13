@@ -41,7 +41,46 @@
     
     NSLog(@"First object on list: %@", [[jsonArray objectAtIndex:0] objectForKey:@"name"]);
     
+    
     [self setFoodData:jsonArray];
+    [self saveData];
 }
+
+- (void) encodeWithCoder:(NSCoder *)encode {
+    [encode encodeObject:self.foodData forKey:@"foodData"];
+}
+
+- (id) initWithCoder:(NSCoder *)decoder {
+    self = [[FoodFetcher alloc]init];
+    if(self != nil){
+        self.foodData = [decoder decodeObjectForKey:@"foodData"];
+    }
+    return self;
+}
+
+- (void) saveData {
+    //Saves an array in NSUserDefaults
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:foodData];
+    [defaults setObject:data forKey:[NSString stringWithFormat:@"myKey"]];
+    [defaults synchronize];
+    
+    NSLog(@"Saved stuff to user defaults %i", [foodData count]);
+    
+}
+
+- (NSArray*) loadData {
+    //Loads data from NSUserDefaults and returns it in an array
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [defaults objectForKey:[NSString stringWithFormat:@"myKey"]];
+    foodData = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    NSLog(@"Loading stuff from user defaults %i", [foodData count]);
+    return foodData;
+}
+
+
 
 @end

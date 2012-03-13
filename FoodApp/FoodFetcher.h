@@ -16,4 +16,9 @@
 + (id)sharedInstance;
 - (void)fetchFoodList;
 - (void)fetchData:(NSArray *)responseData;
+- (void)encodeWithCoder:(NSCoder *)encode;
+- (id)initWithCoder:(NSCoder *)decoder;
+
+- (void) saveData;
+- (NSArray*) loadData; 
 @end

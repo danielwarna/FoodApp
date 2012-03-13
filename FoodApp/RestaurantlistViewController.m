@@ -43,6 +43,7 @@
     
     FoodFetcher *fetcher = [FoodFetcher sharedInstance];
     foodData = fetcher.foodData;
+    [fetcher loadData];
     
     NSLog(@"Fetcherdata count: %i", [foodData count]);
 
@@ -111,19 +112,23 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
+    
     // Return the number of rows in the section.
-    return 5;
+    return [fetcher.foodData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
     static NSString *CellIdentifier = @"RestaurantCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = @"Gado1";
+    NSDictionary *aDictionary = [fetcher.foodData objectAtIndex:(indexPath.row)]; 
+    cell.textLabel.text = [aDictionary objectForKey:@"name"];
     
     // Configure the cell...
     
