@@ -93,8 +93,10 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DetailViewController *detailView = segue.destinationViewController;
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
     NSIndexPath *selectedIndexPath;
     selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    detailView.restaurantData = [fetcher.foodData objectAtIndex:[selectedIndexPath row]];
     
     //detailView.resturantInfo = hämta restauranginfo
     NSLog(@"Preparing for segue from restaurant list");

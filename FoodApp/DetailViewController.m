@@ -42,6 +42,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *dayOfWeek[7] = {@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Friday'"@"Saturday",@"Sunday"};
+
     static NSString *CellIdentifier = @"DetailCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -50,9 +52,27 @@
     }
     NSArray *lunchArray = [restaurantData objectForKey:@"lunchmenu"];
     
-    cell.textLabel.text = [[[[lunchArray objectAtIndex:0]objectForKey:@"items"]objectAtIndex:0]objectForKey:@"name"];
+    //Creating the header
+    UILabel *header = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 320, 28)];
+    header.text = dayOfWeek[[indexPath row]];
+    header.backgroundColor = [UIColor blueColor];
     
-    // Configure the cell...
+    [cell addSubview:header];
+   // cell.textLabel.text = [[[[lunchArray objectAtIndex:0]objectForKey:@"items"]objectAtIndex:0]objectForKey:@"name"];
+    NSArray *lunchPerDay = [[lunchArray objectAtIndex:[indexPath row]]objectForKey:@"items"];
+    
+    // Creating the extra cells.
+    for (int i=0; i<[lunchPerDay count]; i++) {
+        UILabel *label;
+        if (i==0) {
+            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40, 200, 20))];
+        }else{
+            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(i*20), 200, 20))];
+        }
+        [label setText:[[lunchPerDay objectAtIndex:i]objectForKey:@"name"]];
+        [cell addSubview:label];
+        
+    }
     
     return cell;
 }
