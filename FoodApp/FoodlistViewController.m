@@ -39,6 +39,7 @@
     NSLog(@"loaded the foodlistviewcontroller");
     
     FoodFetcher *fetcher = [FoodFetcher sharedInstance];
+    [fetcher loadData];
     foodData = fetcher.foodData;
 
     NSLog(@"Fetcherdata count: %i", [foodData count]);
@@ -61,6 +62,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [[FoodFetcher sharedInstance] loadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -79,9 +81,12 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
+    [fetcher loadData];
     DetailViewController *detailView = segue.destinationViewController;
     NSIndexPath *selectedIndexPath;
     selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    detailView.restaurantData = [fetcher.foodData objectAtIndex:[selectedIndexPath row]];
     
     NSLog(@"Preparing for segue");
     //detailView.resturantInfo = hämta restauranginfo
@@ -106,31 +111,41 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 4;
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
+    
+    return [fetcher.foodData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"FoodCell";
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
+    [fetcher loadData];
+    NSDictionary *foodDict = [fetcher.foodData objectAtIndex:([indexPath row])];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     UILabel *header = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 320, 28)];
-    header.text = @"Gadolinia"; 
+    header.text = [foodDict objectForKey:@"name"]; 
     header.backgroundColor = [UIColor blueColor];
     //cell.textLabel.text = @"Gadolinia";
     //Generating menuitems
     [cell addSubview:header];
-    for (int i=0; i<4; i++) {
+    //getting the foodlist as an array, uglyugly code :S
+    NSArray *foodArray= [[[foodDict objectForKey:@"lunchmenu"] objectAtIndex:0]objectForKey:@"items"];
+    //foodDict = [foodArray objectAtIndex:0];
+    //foodArray = [foodDict objectForKey:@"items"];
+    
+    for (int i=0; i<[foodArray count]; i++) {
         UILabel *label;
         if (i==0) {
             label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40, 200, 20))];
         }else{
-            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(i*20), 200, 20))];
+            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(i*40), 200, 20))];
         }
-        [label setText:@"Testing"];
+        [label setText:[[foodArray objectAtIndex:i]objectForKey:@"name"]];
         [cell addSubview:label];
         
     }

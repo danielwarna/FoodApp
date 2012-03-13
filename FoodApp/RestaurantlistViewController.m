@@ -67,6 +67,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [[FoodFetcher sharedInstance] loadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated

@@ -14,7 +14,7 @@
 @synthesize RestaurantName;
 @synthesize OpenHours;
 @synthesize foodListTable;
-@synthesize resturantInfo;
+@synthesize restaurantData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +30,7 @@
 -(void) viewWillAppear:(BOOL)animated{
     //view appears
     NSLog(@"Detailview will appera");
+    RestaurantName.text = [restaurantData objectForKey:@"name"];
 }
 
 

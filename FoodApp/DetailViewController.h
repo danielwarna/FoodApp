@@ -20,6 +20,6 @@
 @property (nonatomic, retain) IBOutlet UITableView *foodListTable; //Behöver vi en tableview, eller sku de vara lättare att bara generara nå labels eller nå i den stilen?
 @property (nonatomic, retain) IBOutlet UIButton *NavigateButton;
 
-@property(retain, nonatomic) FoodModel *resturantInfo;
+@property(retain, nonatomic) NSDictionary *restaurantData;
 
 @end
