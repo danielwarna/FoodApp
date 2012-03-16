@@ -22,4 +22,7 @@
 
 @property(retain, nonatomic) NSDictionary *restaurantData;
 
+
+- (IBAction)navigateTo:(id)sender;
+
 @end

@@ -65,11 +65,12 @@
     for (int i=0; i<[lunchPerDay count]; i++) {
         UILabel *label;
         if (i==0) {
-            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40, 200, 20))];
+            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40, 280, 20))];
         }else{
-            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(i*20), 200, 20))];
-        }
+            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(i*20), 280, 20))];
+        }	
         [label setText:[[lunchPerDay objectAtIndex:i]objectForKey:@"name"]];
+        [label setNumberOfLines:2];
         [cell addSubview:label];
         
     }
@@ -85,5 +86,16 @@
     [self setNavigateButton:nil];
     [self setTitleBar:nil];
     [super viewDidUnload];
+}
+- (IBAction)navigateTo:(id)sender {
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    NSMutableString *astring = [[NSMutableString  alloc] initWithString:@"http://maps.google.com/maps?saddr=Current Location&daddr="];
+    NSLog(astring);
+    [astring appendString:[restaurantData objectForKey:@"address"]];
+    NSLog(astring);
+    NSString *bString = [astring stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(bString);
+    [app openURL:[NSURL URLWithString:(bString)]];
 }
 @end
