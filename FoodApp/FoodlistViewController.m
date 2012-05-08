@@ -269,9 +269,7 @@
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:date];
     int weekday = (([comps weekday]+5)%7);
-    
-    NSLog(@"Week day is %i", weekday);
-    return weekday;
+        return weekday;
     
 }
 
