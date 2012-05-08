@@ -14,8 +14,11 @@
 
 @property (retain, nonatomic) NSArray *restaurantList;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *updateButton;
 @property (weak, nonatomic) IBOutlet UILabel *Restaurant;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantInfo;
 @property (weak, nonatomic) IBOutlet UIImageView *restaurantLogo;
+
+- (IBAction)updateList:(id)sender;
 
 @end

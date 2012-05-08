@@ -10,7 +10,10 @@
 
 @interface FoodlistViewController : UITableViewController {
     NSArray *foodData;
+    IBOutlet UIBarButtonItem *updateButton;
 }
+- (IBAction)update:(id)sender;
+- (int)getWeekDay;
 
 @end
 	

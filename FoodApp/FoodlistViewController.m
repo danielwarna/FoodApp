@@ -54,6 +54,7 @@
 - (void)viewDidUnload
 {
 
+    updateButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -116,6 +117,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    int currentday = [self getWeekDay];
+    UILabel *header;
+    UILabel *label;
+ 
     static NSString *CellIdentifier = @"FoodCell";
     FoodFetcher *fetcher = [FoodFetcher sharedInstance];
     [fetcher loadData];
@@ -124,38 +130,84 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+        NSLog(@"Cell was nil");
     }
-    UILabel *header = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 320, 28)];
-    header.text = [foodDict objectForKey:@"name"]; 
-    header.backgroundColor = [UIColor blueColor];
-    //cell.textLabel.text = @"Gadolinia";
-    //Generating menuitems
+
+//    else {
+//        
+//        header = (UILabel *)[cell.contentView viewWithTag:30];
+//        NSLog(@"Cell not nill");
+//        NSLog(header.text);
+//        header.text = [foodDict objectForKey:@"name"]; 
+//        NSLog(header.text);
+//
+//    }
+    
+    header = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 320, 28)];
+    header.text = [foodDict objectForKey:@"name"];
+    //header.text = dayOfWeek[[indexPath row]];
+    header.backgroundColor = [UIColor grayColor];    
     [cell addSubview:header];
+    
     //getting the foodlist as an array, uglyugly code :S
-    NSArray *foodArray= [[[foodDict objectForKey:@"lunchmenu"] objectAtIndex:0]objectForKey:@"items"];
+    @try {
+        NSArray *foodArray= [[[foodDict objectForKey:@"lunchmenu"] objectAtIndex:currentday]objectForKey:@"items"];
+        for (int i=0; i<[foodArray count]; i++) {
+            //NSLog([NSString stringWithFormat:@"%d", i ]);
+          
+                if (i==0) {
+                    label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40, 200, 20))];
+                }else{
+                    label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(i*30), 200, 20))];
+                }
+                label.tag = i;
+        
+                [label setText:[[foodArray objectAtIndex:i]objectForKey:@"name"]];
+                [cell.contentView addSubview:label];
+                //[label setText:[[foodArray objectAtIndex:i]objectForKey:@"name"]];
+               // [label setNumberOfLines:2];
+                [label setFont:[UIFont systemFontOfSize:12]];
+                label.lineBreakMode = UILineBreakModeWordWrap;
+                [label setNumberOfLines:0];
+                [label sizeToFit];
+        }
+    }
+    @catch (NSException *exception) {
+        //NSLog(@"No fooditems in array");
+    }
+    @finally {
+        //NSLog(@"Finally do stuff");
+    }
+    //NSArray *foodArray= [[[foodDict objectForKey:@"lunchmenu"] objectAtIndex:0]objectForKey:@"items"];
     //foodDict = [foodArray objectAtIndex:0];
     //foodArray = [foodDict objectForKey:@"items"];
-    
-    for (int i=0; i<[foodArray count]; i++) {
-        UILabel *label;
-        if (i==0) {
-            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40, 200, 20))];
-        }else{
-            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(i*40), 200, 20))];
-        }
-        [label setText:[[foodArray objectAtIndex:i]objectForKey:@"name"]];
-        [cell addSubview:label];
-        
-    }
-    
-    
+
     // Configure the cell...
     
     return cell;
 }
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     //This is where we calculate the cell rowheight
-    return 200;
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
+    [fetcher loadData];
+    NSDictionary *foodDict = [fetcher.foodData objectAtIndex:([indexPath row])];
+    @try {
+        NSArray *foodArray= [[[foodDict objectForKey:@"lunchmenu"] objectAtIndex:0]objectForKey:@"items"];
+        //NSLog([NSString stringWithFormat:@"%d",[foodArray count]]);
+        return [foodArray count]*40;
+    }
+    @catch (NSException *exception) {
+        return 30;
+    }
+    @finally {
+        
+    }
+    
+    
+    //int height = [foodArray count]*20;
+    //return height;
+    //return 180;
 }
                                                                         
 /*
@@ -210,4 +262,23 @@
      */
 }
 
+-(int)getWeekDay
+{
+    NSData *date =[NSDate date];
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:date];
+    int weekday = (([comps weekday]+5)%7);
+    
+    NSLog(@"Week day is %i", weekday);
+    return weekday;
+    
+}
+
+- (IBAction)update:(id)sender {
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
+    [fetcher fetchFoodList];
+    //foodData = fetcher.foodData;
+    [self.tableView reloadData];
+}
 @end

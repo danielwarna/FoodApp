@@ -77,7 +77,7 @@
     NSData *data = [defaults objectForKey:[NSString stringWithFormat:@"myKey"]];
     foodData = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     
-    NSLog(@"Loading stuff from user defaults %i", [foodData count]);
+    //NSLog(@"Loading stuff from user defaults %i", [foodData count]);
     return foodData;
 }
 

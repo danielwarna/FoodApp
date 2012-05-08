@@ -16,6 +16,7 @@
 @synthesize restaurantInfo;
 @synthesize restaurantLogo;
 @synthesize restaurantList;
+@synthesize updateButton;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -39,6 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSUserDefaults standardUserDefaults] setPersistentDomain:[NSDictionary dictionary] forName:[[NSBundle mainBundle] bundleIdentifier]];
     NSLog(@"Loaded the restaurantlistviewcontroller");
     
     FoodFetcher *fetcher = [FoodFetcher sharedInstance];
@@ -59,6 +61,7 @@
     [self setRestaurant:nil];
     [self setRestaurantInfo:nil];
     [self setRestaurantLogo:nil];
+    [self setUpdateButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -190,4 +193,10 @@
      */
 }
 
+- (IBAction)updateList:(id)sender {
+    FoodFetcher *fetcher = [FoodFetcher sharedInstance];
+    [fetcher fetchFoodList];
+    //foodData = fetcher.foodData;
+    [self.tableView reloadData];
+}
 @end

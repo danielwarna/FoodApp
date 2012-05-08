@@ -54,8 +54,9 @@
     
     //Creating the header
     UILabel *header = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 320, 28)];
-    header.text = dayOfWeek[[indexPath row]];
-    header.backgroundColor = [UIColor blueColor];
+    header.text = [[lunchArray objectAtIndex:[indexPath row]] objectForKey:@"date"];
+    //header.text = dayOfWeek[[indexPath row]];
+    header.backgroundColor = [UIColor grayColor];
     
     [cell addSubview:header];
    // cell.textLabel.text = [[[[lunchArray objectAtIndex:0]objectForKey:@"items"]objectAtIndex:0]objectForKey:@"name"];
@@ -65,17 +66,27 @@
     for (int i=0; i<[lunchPerDay count]; i++) {
         UILabel *label;
         if (i==0) {
-            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40, 280, 20))];
+            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40, 280, 30))];
         }else{
-            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(i*20), 280, 20))];
+            label =[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(i*30), 280, 30))];
         }	
         [label setText:[[lunchPerDay objectAtIndex:i]objectForKey:@"name"]];
-        [label setNumberOfLines:2];
+        [label setFont:[UIFont systemFontOfSize:12]];
+        label.lineBreakMode = UILineBreakModeWordWrap;
+        [label setNumberOfLines:0];
+        [label sizeToFit];
+        
         [cell addSubview:label];
         
     }
+    [cell addSubview:[[UILabel alloc]initWithFrame:(CGRectMake(25,40+(7*20),280,20))]];
     
     return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //This is where we calculate the cell rowheight
+    return 200;
 }
 
 
